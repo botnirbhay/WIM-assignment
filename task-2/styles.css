@@ -1,0 +1,48 @@
+.dropform{
+  align-items: center;
+  display: inline;
+  margin-left: 10px;
+  margin-right: 20px;
+
+}
+
+.card {
+  background: white;
+  padding: 10px 25px;
+  border-radius: 10px;
+  width: 200px;
+  border-color: green;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
+
+.card p {
+  font-weight: bold;
+  color: red;
+  font-family: 'Poppins', sans-serif;
+}
+
+.droprow{
+  display: flex;
+  margin: auto;
+}
+
+h2 {
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+}
+
+body{
+  align-items: center;
+  background: white;
+}
+
+.dropselect{
+  background: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
