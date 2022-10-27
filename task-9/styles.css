@@ -1,0 +1,25 @@
+h1 {
+  font-size: 140px;
+  text-align: center;
+  animation-name: blink_text;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  margin: 0;
+}
+
+@keyframes blink_text {
+    0% {
+      color: red;
+    }
+    50% {
+      color: transparent;
+    }
+    100% {
+      color: red;
+    }
+}
+
+body{
+  align-items: center;
+  background: white;
+}
