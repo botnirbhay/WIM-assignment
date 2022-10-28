@@ -30,7 +30,13 @@ loginForm.addEventListener("submit", async (e) => {
 async function sendVerificationCode(mobileNumber) {
   const res = await axios.post(baseUrl + `send-verification-otp`, {
     mobileNumber,
+  }, {
+    headers: {
+      "Content-Type": "application/json",
+    },
   });
+
+  console.log(res);
 
   if (res.status === 200) {
     return res.data.verification;

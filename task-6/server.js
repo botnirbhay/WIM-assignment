@@ -2,9 +2,9 @@ const express = require("express");
 const app = express();
 const PORT = 3000;
 
-const accountSid = "AC794c1c15059d5de99eb858495ebabd41";
-const authToken = "1969ee815a558e9d19756b805f9ae083";
-const serviceId = "";
+const accountSid = "ACc0a7b14c2c48625a02fb4fddee08714f";
+const authToken = "f5e10f674121cd71fc07c5f985cc1194";
+const serviceId = "VA8a26123ea6c2a01264210cfb4693dedd";
 
 const client = require("twilio")(accountSid, authToken);
 
@@ -17,14 +17,15 @@ app.get(`/`, (req, res) => {
 
 app.post(`/send-verification-otp`, (req, res) => {
   const { mobileNumber } = req.body;
-
+  console.log(mobileNumber);
   client.verify
     .services(serviceId)
-    .verifications.create({ to: "+91" + mobileNumber, channel: "sms" })
+    .verifications.create({to: "+91"+mobileNumber, channel: "sms"})
     .then((verification) => {
       return res.status(200).json({ verification });
     })
     .catch((error) => {
+      console.log(error);
       return res.status(400).json({ error });
     });
 });
